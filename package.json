@@ -1,6 +1,6 @@
 {
 	"name": "react-magnifier-update",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "React image magnifier component",
 	"keywords": [
 		"react",
@@ -32,7 +32,6 @@
 		"start:rollup": "rollup --config --sourcemap --watch",
 		"start:storybook": "start-storybook --port 3000",
 		"build": "run-s build:*",
-		"build:clean": "rm -rf ./dist/ ./dist-storybook/",
 		"build:rollup": "rollup --config",
 		"format": "prettier --write",
 		"version": "yarn build",
@@ -97,5 +96,5 @@
 			],
 			"react/jsx-sort-default-props": "off"
 		}
-	}		
+	}
 }
