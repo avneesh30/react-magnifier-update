@@ -1,4 +1,5 @@
-{	
+{
+	"extends": "tsconfig-2",
 	"compilerOptions": {
 		"module": "ES6",
 		"declaration": true,

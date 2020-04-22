@@ -34,10 +34,6 @@
 		"build": "run-s build:*",
 		"build:clean": "rm -rf ./dist/ ./dist-storybook/",
 		"build:rollup": "rollup --config",
-		"build:storybook": "build-storybook --output-dir ./dist-storybook/",
-		"test": "tsc --noEmit",
-		"lint:css": "stylelint --fix --max-warnings 0",
-		"lint:ts": "eslint --ext .ts,.tsx --fix --max-warnings 0",
 		"format": "prettier --write",
 		"version": "yarn build",
 		"release": "np"
@@ -47,7 +43,9 @@
 		"@types/lodash.throttle": "^4.1.6",
 		"@types/react": "^16.9.23",
 		"lodash.debounce": "^4.0.8",
-		"lodash.throttle": "^4.1.1"
+		"lodash.throttle": "^4.1.1",
+		"prettier-config-2": "0.0.1",
+		"tsconfig-2": "0.0.1"
 	},
 	"peerDependencies": {
 		"react": "^16.0.0"
@@ -99,23 +97,5 @@
 			],
 			"react/jsx-sort-default-props": "off"
 		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx}": [
-			"yarn lint:ts",
-			"yarn format"
-		],
-		"*.{css,sass,scss}": [
-			"yarn lint:css",
-			"yarn format"
-		],
-		"*.{html,js,json,jsx,md,vue,yaml,yml}": [
-			"yarn format"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn test && lint-staged"
-		}
-	}
+	}		
 }
