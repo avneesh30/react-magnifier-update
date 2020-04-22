@@ -35,7 +35,7 @@
 		"build:rollup": "rollup --config",
 		"format": "prettier --write",
 		"version": "yarn build",
-		"release": "np"
+		"release": "np --no-2fa"
 	},
 	"dependencies": {
 		"@types/lodash.debounce": "^4.0.6",
